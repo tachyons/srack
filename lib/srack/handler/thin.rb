@@ -1,3 +1,4 @@
+require 'thin'
 module Srack
   module Handler
     class Thin

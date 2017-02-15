@@ -17,8 +17,8 @@ module Srack
       new_from_string(config_file)
     end
 
-    def new_from_string(builder_script)
-      eval "Rack::Builder.new {\n" + builder_script + "\n}.to_app"
+    def self.new_from_string(builder_script)
+      eval "Srack::Builder.new {\n" + builder_script + "\n}.to_app"
     end
   end
 end

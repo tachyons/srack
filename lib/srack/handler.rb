@@ -1,6 +1,6 @@
 module Srack
   module Handler
-    autoload :Thin, 'handler/thin'
+    autoload :Thin, 'srack/handler/thin'
     def self.default
       Handler::Thin
     end
