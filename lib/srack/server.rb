@@ -11,6 +11,7 @@ module Srack
     end
 
     def start
+      server.run @app, @options
     end
 
     private
@@ -26,6 +27,10 @@ module Srack
 
     def build_app
       Builder.parse_file(@options[:config])
+    end
+
+    def server
+      server ||= Srack::Handler.default
     end
   end
 end
