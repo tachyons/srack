@@ -1,5 +1,4 @@
 require "srack/version"
-
 module Srack
-  # Your code goes here...
+  autoload :Server, 'srack/server'
 end
