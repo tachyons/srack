@@ -16,7 +16,6 @@ module Srack
     def to_app
       app = @run
       app = @use.reverse.inject(app) { |a,e| e[a] }
-      binding.pry
       app
     end
 
