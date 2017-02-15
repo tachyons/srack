@@ -2,7 +2,7 @@ module Srack
   class Server
     def initialize
       @options = default_options 
-      @options[:config] = ARGV[0][0] if ARGV[0][0]
+      @options[:config] = ARGV[0] if ARGV[0]
       @app = build_app
     end
 
